@@ -30,7 +30,7 @@
     "@types/jest": "^23.1.4",
     "@types/leaflet": "^1.4.4",
     "@types/node": "^12.7.5",
-    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-pwa": "^3.0.5",
     "@vue/cli-plugin-typescript": "^3.0.5",
     "@vue/cli-plugin-unit-jest": "^3.0.5",
