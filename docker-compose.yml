@@ -94,6 +94,7 @@ services:
   geoserver:
     build: ./geoserver
     # image: kartoza/geoserver:2.15.2
+    image: kartoza/geoserver:2.16.1
     volumes:
       # - ./geoserver_data:/opt/geoserver/data_dir
       - geoserver_data:/opt/geoserver/data
@@ -124,7 +125,7 @@ services:
     build: ./mercator_routine_products
     volumes:
       - /home/ubuntu/ftplocal:/home/evx/ftp/files/
-      - geoserver_data:/home/geoserver/geoserver_data
+      - ./geoserver/geoserver_data:/home/geoserver/geoserver_data
     depends_on:
       # - geoserver
       - db
@@ -137,7 +138,8 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/maretec/mercator/geoserver_data 
+      #device: /home/maretec/mercator/geoserver_data #substitui mercator por WebGIS-Platform
+      device: /home/maretec/WebGIS-Platform/geoserver/geoserver_data 
   geo-db-data:
   pgdata:
     driver: local
